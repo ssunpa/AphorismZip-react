@@ -6,8 +6,8 @@ class Item extends Component {
         return (
             <>
                 <li className="item">
-                    <h1>{aphorism}</h1>
-                    <h2>{origin}</h2>
+                    <h1 className="item__content">{aphorism}</h1>
+                    <h2 className="item__origin">{origin}</h2>
                 </li>
             </>
         );

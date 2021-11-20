@@ -8,10 +8,24 @@ button {
     cursor: pointer;
 }
 
+.add {
+    padding: 1rem;
+    text-align: end;
+}
+
+.add__btn {
+    padding: 1rem;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 32px;
+}
+
 .navbar {
     padding: 1em;
     background-color: white;
     opacity: 0.85;
+    text-align: center;
 }
 
 .navbar__logo {
@@ -20,13 +34,19 @@ button {
     font-weight: bold;
 }
 
+.items {
+    height: 350px;
+    text-align: center;
+    display: flex;
+    overflow-x: scroll;
+}
+
 .item {
-    margin-right: 1.5em;
+    margin: 1em;
     padding: 1.5rem;
     background-color: white;
-    opacity: 0.85;
+    opacity: 0.9;
     height: 250px;
-    width: 300px;
     border-radius: 20px;
     display: inline-block;
 }

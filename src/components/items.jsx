@@ -5,7 +5,7 @@ class Items extends Component {
     render() {
         return (
             <>
-                <ul>
+                <ul className="items">
                     {this.props.testitems.map((item) => (
                         <Item key={item.id} test={item} />
                     ))}
