@@ -8,6 +8,18 @@ button {
     cursor: pointer;
 }
 
+.modalView {
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 35px;
+}
+
 .add {
     padding: 1rem;
     text-align: end;
