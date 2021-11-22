@@ -19,15 +19,16 @@ class AddItem extends Component {
 
     render() {
         return (
-            <div className="add">
+            <>
                 <button className="add__btn" onClick={this.openModal}>
                     <i className="fas fa-plus"></i>
                 </button>
                 <NewItem
                     isOpen={this.state.isModalOpen}
                     close={this.closeModal}
+                    onAdd={this.props.onAdd}
                 />
-            </div>
+            </>
         );
     }
 }
