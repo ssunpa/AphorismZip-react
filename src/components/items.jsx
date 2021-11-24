@@ -7,8 +7,12 @@ class Items extends Component {
         return (
             <>
                 <ul className="items">
-                    {this.props.items.map((item) => (
-                        <Item key={item.id} test={item} />
+                    {this.props.initItme.map((item) => (
+                        <Item
+                            key={item.id}
+                            initItme={item}
+                            onDelete={this.props.onDelete}
+                        />
                     ))}
                 </ul>
                 <AddItem onAdd={this.props.onAdd} />

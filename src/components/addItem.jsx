@@ -27,6 +27,7 @@ class AddItem extends Component {
                     isOpen={this.state.isModalOpen}
                     close={this.closeModal}
                     onAdd={this.props.onAdd}
+                    onDelete={this.props.onDelete}
                 />
             </>
         );

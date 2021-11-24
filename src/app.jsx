@@ -6,11 +6,12 @@ import Navbar from './components/navbar';
 class App extends Component {
     state = {
         items: [
-            { id: 1, content: 'first aphorism...', origin: 'testone' },
-            { id: 2, content: 'second aphorism...', origin: 'testtwo' },
-            { id: 3, content: 'third aphorism...', origin: 'testthree' },
-            { id: 4, content: 'fourth aphorism...', origin: 'testfour' },
-            { id: 5, content: 'fifth aphorism...', origin: 'testfive' },
+            {
+                id: 1,
+                content:
+                    '꿈을 이루고자 하는 용기만 있다면 모든 꿈을 이룰 수 있다.',
+                origin: '월트 디즈니',
+            },
         ],
     };
 
@@ -22,11 +23,20 @@ class App extends Component {
         this.setState({ items });
     };
 
+    handleDelete = (choose) => {
+        const items = this.state.items.filter((item) => item.id !== choose.id);
+        this.setState({ items });
+    };
+
     render() {
         return (
             <>
                 <Navbar />
-                <Items items={this.state.items} onAdd={this.handleAdd} />
+                <Items
+                    initItme={this.state.items}
+                    onAdd={this.handleAdd}
+                    onDelete={this.handleDelete}
+                />
             </>
         );
     }
