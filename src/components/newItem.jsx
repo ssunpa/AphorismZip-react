@@ -29,7 +29,7 @@ class NewItem extends Component {
                 onRequestClose={this.props.close}
             >
                 <header className="modal__header">
-                    <span>Add New Aphorism✍</span>
+                    <span className="modal__headerName">새 글귀 작성</span>
                     <button
                         className="modal__headerBtn"
                         onClick={this.props.close}
@@ -37,7 +37,7 @@ class NewItem extends Component {
                         <i className="far fa-times-circle"></i>
                     </button>
                 </header>
-                <form>
+                <form className="modal__form">
                     <div className="form__content">
                         글귀 :
                         <input
@@ -56,7 +56,12 @@ class NewItem extends Component {
                     </div>
                 </form>
                 <footer>
-                    <button onClick={this.onSubmit}>Add Item!</button>
+                    <button
+                        className="modal__footerBtn"
+                        onClick={this.onSubmit}
+                    >
+                        추가하기
+                    </button>
                 </footer>
             </Modal>
         );
