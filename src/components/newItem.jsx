@@ -17,7 +17,7 @@ class NewItem extends Component {
             this.props.onAdd(content, origin);
             this.props.close();
         } else {
-            alert('error');
+            alert('내용을 모두 입력해주세요!');
         }
     }
 
@@ -29,7 +29,7 @@ class NewItem extends Component {
                 onRequestClose={this.props.close}
             >
                 <header className="modal__header">
-                    <span className="modal__headerName">새 글귀 작성</span>
+                    <span className="modal__headerName">New Aphorism</span>
                     <button
                         className="modal__headerBtn"
                         onClick={this.props.close}
@@ -39,7 +39,7 @@ class NewItem extends Component {
                 </header>
                 <form className="modal__form">
                     <div className="form__content">
-                        글귀 :
+                        content :
                         <input
                             type="text"
                             className="input__content"
@@ -47,7 +47,7 @@ class NewItem extends Component {
                         />
                     </div>
                     <div className="form__origin">
-                        출처 :
+                        from :
                         <input
                             type="text"
                             className="input__origin"
@@ -60,7 +60,7 @@ class NewItem extends Component {
                         className="modal__footerBtn"
                         onClick={this.onSubmit}
                     >
-                        추가하기
+                        Add new item!
                     </button>
                 </footer>
             </Modal>

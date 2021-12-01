@@ -1,5 +1,17 @@
+@font-face {
+    font-family: 'eun';
+    src: url(./font/KCC-eunyoung.ttf);
+}
+
 body {
-    background-color: rgb(56, 56, 56);
+    height: 100vh;
+    background: rgb(96, 96, 96);
+    background: radial-gradient(
+        circle,
+        rgba(96, 96, 96, 1) 0%,
+        rgba(45, 45, 45, 1) 100%
+    );
+    background-attachment: fixed;
 }
 
 button {
@@ -9,12 +21,13 @@ button {
 }
 
 .modalView {
+    font-family: Georgia, serif;
     padding: 25px;
     width: 300px;
     height: 400px;
     margin: auto;
     margin-top: 50px;
-    background-color: black;
+    background-color: rgb(41, 41, 41);
     color: white;
     border-radius: 20px;
     display: grid;
@@ -26,6 +39,8 @@ button {
 }
 
 input {
+    font-family: 'eun';
+    font-size: 15px;
     display: block;
     border-radius: 10px;
 }
@@ -45,15 +60,24 @@ input {
 .modal__header {
     position: relative;
     text-align: center;
+    font-size: 30px;
+    font-style: italic;
 }
 
 .modal__headerBtn {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 0px;
+    top: 0px;
     background-color: transparent;
     color: white;
     font-size: 30px;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.modal__headerBtn:hover {
+    opacity: 1;
+    transform: scale(1.2);
 }
 
 .modal__headerName {
@@ -61,10 +85,19 @@ input {
 }
 
 .modal__footerBtn {
+    font-family: Georgia, serif;
     width: 100%;
     height: 100%;
     border-radius: 10px;
     font-size: 20px;
+    font-style: italic;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.modal__footerBtn:hover {
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 .add {
@@ -76,31 +109,66 @@ input {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    background-color: rgba(233, 233, 233, 0.9);
-    color: black;
+    background: rgb(221, 221, 221);
+    background: radial-gradient(
+        circle,
+        rgba(221, 221, 221, 1) 0%,
+        rgba(145, 145, 145, 1) 100%
+    );
+    color: rgb(41, 41, 41);
     padding: 1rem;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     font-size: 32px;
+    transition: 0.3s;
+}
+
+.add__btn:hover {
+    transform: scale(1.2);
 }
 
 .navbar {
+    font-family: Georgia, serif;
+    font-style: italic;
     padding: 1em;
-    background-color: rgba(233, 233, 233, 0.9);
     text-align: center;
 }
 
 .navbar__logo {
-    color: black;
+    color: rgb(41, 41, 41);
     font-size: 2.5rem;
     font-weight: bold;
+    text-shadow: -1px 0 rgba(255, 255, 255, 0.726),
+        0 1px rgba(255, 255, 255, 0.726), 1px 0 rgba(255, 255, 255, 0.726),
+        0 -1px rgba(255, 255, 255, 0.726);
+}
+
+@media screen and (min-width: 1200px) {
+    .items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+    .items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .items {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    font-family: 'eun';
     overflow: auto;
+    place-items: center;
 }
 
 .item {
@@ -108,25 +176,30 @@ input {
     width: 300px;
     margin: 1em;
     padding: 1.5rem;
-    background-color: rgba(233, 233, 233, 0.9);
-    color: black;
+    background: rgb(221, 221, 221);
+    background: radial-gradient(
+        circle,
+        rgba(221, 221, 221, 1) 0%,
+        rgba(145, 145, 145, 1) 100%
+    );
+    color: rgb(41, 41, 41);
     height: 250px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    transition: 0.4s;
 }
 
 .item:hover {
-    background-color: black;
+    background: rgba(0, 0, 0, 0.61);
 }
 
 .item:hover > button {
     display: block;
     background-color: transparent;
     color: white;
-    font-size: 70px;
 }
 
 .item:hover > div {
@@ -134,9 +207,16 @@ input {
 }
 
 .item__delete {
-    width: 100%;
-    height: 100%;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    font-size: 75px;
     display: none;
+    transition: 0.3s;
+}
+
+.item__delete:hover {
+    transform: scale(1.2);
 }
 
 .item__content {
